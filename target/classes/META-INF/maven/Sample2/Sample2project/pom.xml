@@ -77,9 +77,14 @@
 
 	</dependencies>
 
-	<!--<build>
+	<build>
 		<plugins>
-			
+			<configuration>
+				<compilerArgs>
+					<arg>--add-exports</arg>
+					<arg>jdk.compiler/com.sun.tools.javac.processing=ALL-UNNAMED</arg>
+				</compilerArgs>
+			</configuration>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
@@ -91,5 +96,5 @@
 				</configuration>
 			</plugin>
 		</plugins>
-	</build>-->
+	</build>
 </project>
